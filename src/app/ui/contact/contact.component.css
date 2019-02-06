@@ -1,0 +1,36 @@
+.table{
+    table-layout: fixed; 
+    white-space:nowrap; 
+    width: auto; 
+    margin-left: auto; 
+    margin-right: auto;
+    height: auto;
+}
+
+tr {
+    line-height: 1.5vh;
+    min-height: 1.5vh;
+    height: 1.5vh;
+ }
+
+ #buttonfacebook:hover{
+     text-shadow: 0px 0px 15px #00ffff;
+ }
+
+
+
+  .text-center{
+      background-color: rgba(255, 255, 255, 0)
+  }
+
+  #contactbox{
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.747);
+
+  }
+
+  #mainbox{
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.514);
+
+  }
