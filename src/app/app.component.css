@@ -1,5 +1,5 @@
 html { 
-    background: url(../Media/background-wooden.jpg) no-repeat center center fixed; 
+    background: url(../Media/background-wooden.jpg) no-repeat center center fixed, #ffffff; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
