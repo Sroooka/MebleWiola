@@ -1,44 +1,61 @@
 <html>
-
-  <table style="padding: 40px; margin-top: 49px;">
-      <tbody>
-        <tr>
-            <td style="padding: 10px;"></td>
+<table style="padding-left: 40px; padding-right: 40px;">
+  <tbody>
+      <tr>
+          <td style="padding: 25px;"></td>
         </tr>
         <tr>
           <td style="padding: 10px;">
-              <div class="kolocontainer">
-                  <img class="koloimg" src="./assets/Media/frame.png" style="width: 100%; transform:rotate(0deg);">
-                </div>
-          </td>          
-          <td style="padding: 10px;">
-              <div class="kolocontainer">
-                  <img class="koloimg" src="./assets/Media/frame.png" style="width: 100%; transform:rotate(0deg);">
-                </div>
+            <div class="container">
+              <a href="http://www.mkfoam.pl/cennik/lozka.pdf" target="_blank">
+                <img class="img" (mouseenter)="highlight(this, 'kolo')" (mouseleave)="unhighlight(this, 'kolo')" [src]="srcKolo"
+                  style="width: 100%; transform:rotate(0deg);">
+              </a>
+            </div>
           </td>
           <td style="padding: 10px;">
-              <div class="kolocontainer">
-                  <img class="koloimg" src="./assets/Media/frame.png" style="width: 100%; transform:rotate(0deg);">
-                </div>
+            <div class="container">
+              <a href="http://pacyga.pl/pl/2045-oferta" target="_blank">
+                <img class="img" (mouseenter)="highlight(this, 'drewmax')" (mouseleave)="unhighlight(this, 'drewmax')"
+                  [src]="srcDrewmax" style="width: 100%; transform:rotate(0deg);">
+                </a>
+            </div>
+          </td>
+          <td style="padding: 10px;">
+            <div class="container">
+              <a href="http://www.galameble.pl/k,1,meble-do-pokoju.html" target="_blank">
+                <img class="img" (mouseenter)="highlight(this, 'gala')" (mouseleave)="unhighlight(this, 'gala')" [src]="srcGala"
+                  style="width: 100%; transform:rotate(0deg);">
+              </a>
+            </div>
           </td>
         </tr>
         <tr>
-            <td style="padding: 10px;">
-                <div class="kolocontainer">
-                    <img class="koloimg" src="./assets/Media/frame.png" style="width: 100%; transform:rotate(0deg);">
-                  </div>
-            </td>          
-            <td style="padding: 10px;">
-                <div class="kolocontainer">
-                    <img class="koloimg" src="./assets/Media/frame.png" style="width: 100%; transform:rotate(0deg);">
-                  </div>
-            </td>
-            <td style="padding: 10px;">
-                <div class="kolocontainer">
-                    <img class="koloimg" src="./assets/Media/frame.png" style="width: 100%; transform:rotate(0deg);">
-                  </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+          <td style="padding: 10px;">
+            <div class="container">
+              <a href="https://halmar.pl/media/halmar_2018.pdf" target="_blank">
+                <img class="img" (mouseenter)="highlight(this, 'halmar')" (mouseleave)="unhighlight(this, 'halmar')" [src]="srcHalmar"
+                  style="width: 100%; transform:rotate(0deg);">
+              </a>
+            </div>
+          </td>
+          <td style="padding: 10px;">
+            <div class="container">
+              <a href="http://www.kliber.com.pl/krzesla/" target="_blank">
+                <img class="img" (mouseenter)="highlight(this, 'kliber')" (mouseleave)="unhighlight(this, 'kliber')" [src]="srcKliber"
+                  style="width: 100%; transform:rotate(0deg);">
+              </a>
+            </div>
+          </td>
+          <td style="padding: 10px;">
+            <div class="container">
+              <a href="http://www.merwina.pl/oferta.html" target="_blank">
+                <img class="img" (mouseenter)="highlight(this, 'merwina')" (mouseleave)="unhighlight(this, 'merwina')"
+                  [src]="srcMerwina" style="width: 100%; transform:rotate(0deg);">
+              </a>
+            </div>
+          </td>
+        </tr>
+  </tbody>
+</table>
 </html>
