@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   weekday = null;
   hours = null;
   minutes = null;
+
   constructor() {
 
    }
@@ -89,5 +90,60 @@ export class HomeComponent implements OnInit {
           }
         }
     return true;
+  }
+
+  getOpenedMessage(){
+    this.updateTime();
+    var message = "Sklep otwarty jeszcze przez ";
+    this.day = new Date();
+    this.weekday = this.weekdays[this.day.getDay()];
+    this.hours = this.day.getHours();
+    this.minutes = this.day.getMinutes();
+
+    var hoursLeft = 0;
+    var minLeft = 0;
+
+    if(this.weekday == "Monday" ||
+        this.weekday == "Tuesday" ||
+        this.weekday == "Wednesday" ||
+        this.weekday == "Thursday" ||
+        this.weekday == "Friday"){
+          // Normal day
+          // from 9-18
+
+          hoursLeft = 18 - this.hours - 1;
+          minLeft = (60 - this.minutes) % 60;
+          if(minLeft == 0) hoursLeft++;
+          
+        } else if(this.weekday == "Saturday"){
+          // Saturday
+          // from 9-13:30
+          
+        } else if(this.weekday == "Sunday"){
+          // Sunday
+          // from 9-13:00
+          hoursLeft = 13 - this.hours - 1;
+          console.log(hoursLeft);
+          minLeft = (60 - this.minutes) % 60;
+          console.log(minLeft);
+          if(minLeft == 0) hoursLeft++;
+          console.log(hoursLeft);
+
+        }
+        
+        message = message + hoursLeft + "h " + minLeft + "min."
+    return message;
+  }
+
+  getClosedMessage(){
+    this.updateTime();
+    var message = "Sklep zamknięty, zapraszamy jutro o godzinie ";
+    var nextWeekday = this.weekdays[(this.day.getDay() + 1) % 7];
+    if(nextWeekday == "Sunday"){
+      message = message + "10:00!";
+    } else{
+      message = message + "9:00!"
+    }
+    return message;
   }
 }

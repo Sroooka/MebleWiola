@@ -1,4 +1,14 @@
 <html>
-    <img class="img" [src]="srcShop"
-                  style="width: 100%; transform:rotate(0deg);">
+    <img class="img" [src]="srcShopTODO"
+    style="width: 100%; transform:rotate(0deg);">
+
+    <div style="margin-top: 50px;">
+        <div *ngIf="checkIfShopIsOpened()">
+            <h2>{{getOpenedMessage()}}</h2>
+          </div>
+          <div *ngIf="!checkIfShopIsOpened()">
+            <h2>{{getClosedMessage()}}</h2>
+          </div>
+
+    </div>
 </html>
