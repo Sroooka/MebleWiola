@@ -33,9 +33,9 @@ export class HomeComponent implements OnInit {
 
   updateImageSource(){
     if(this.checkIfShopIsOpened()){
-      this.srcShop = './assets/Media/Shop/shop_day.png';
+      this.srcShop = './assets/Media/Shop/shop_day.jpg';
     } else{
-      this.srcShop = './assets/Media/Shop/shop_night.png';
+      this.srcShop = './assets/Media/Shop/shop_day.jpg';
     }
   }
 
@@ -94,7 +94,7 @@ export class HomeComponent implements OnInit {
 
   getOpenedMessage(){
     this.updateTime();
-    var message = "Sklep otwarty jeszcze przez ";
+    var message = "Czas do zamknięcia sklepu ";
     this.day = new Date();
     this.weekday = this.weekdays[this.day.getDay()];
     this.hours = this.day.getHours();
@@ -118,20 +118,18 @@ export class HomeComponent implements OnInit {
         } else if(this.weekday == "Saturday"){
           // Saturday
           // from 9-13:30
-          
+          hoursLeft = 14 - this.hours - 1;
+          minLeft = (30 - this.minutes) % 30;
+          if(minLeft == 0) hoursLeft++;
         } else if(this.weekday == "Sunday"){
           // Sunday
           // from 9-13:00
           hoursLeft = 13 - this.hours - 1;
-          console.log(hoursLeft);
           minLeft = (60 - this.minutes) % 60;
-          console.log(minLeft);
           if(minLeft == 0) hoursLeft++;
-          console.log(hoursLeft);
-
         }
         
-        message = message + hoursLeft + "h " + minLeft + "min."
+        message = message + hoursLeft + ":" + minLeft + ". Zapraszamy!";
     return message;
   }
 

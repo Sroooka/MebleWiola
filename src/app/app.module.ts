@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FacebookModule} from 'ngx-facebook';
 import { AppRoutingModule } from './app-routing.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
@@ -17,6 +18,9 @@ import { PageNotFoundComponent } from './ui/page-not-found/page-not-found.compon
 //import { RealisationsComponent } from './ui/realisations/realisations.component';
 //import { OfferComponent } from './ui/offer/offer.component';
 //import { ContactComponent } from './ui/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+
 
 
 
@@ -33,7 +37,9 @@ import { PageNotFoundComponent } from './ui/page-not-found/page-not-found.compon
     BrowserModule,
     UiModule,
     FacebookModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    NgxGalleryModule,
+    BrowserAnimationsModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

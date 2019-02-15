@@ -1,14 +1,44 @@
 <html>
-    <img class="img" [src]="srcShopTODO"
-    style="width: 100%; transform:rotate(0deg);">
+<div style="height: 85vh; width: 100vw;">
+    <table style="table-layout: fixed; white-space:nowrap; width: 100vw; margin-left: auto; margin-right: auto;">
+        <tbody>
+            <tr>
+                <td style="padding: 30px;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">
+                    <a href="http://www.mkfoam.pl/produkty/materace/kieszonkowe/item/39-venus" target="_blank">
+                        <img class="img" src="http://www.mkfoam.pl/images/stories/promocje/styczen2019/venus.jpg" style="width: 100%; border:5px solid #008080;">
+                    </a>
+                </td>
+                <td style="padding: 10px;">
+                    <a href="http://www.mkfoam.pl/produkty/poduszki/item/167-gel" target="_blank">
+                        <img class="img" src="http://www.mkfoam.pl/images/stories/promocje/styczen2019/gel.jpg" style="width: 100%; border:5px solid #008080;">
+                    </a> </td>
+                <td style="padding: 10px;">
+                    <a href="http://www.mkfoam.pl/produkty/lozka/tapicerowane/item/231-81274" target="_blank">
+                        <img class="img" src="http://www.mkfoam.pl/images/stories/promocje/styczen2019/81274.jpg" style="width: 100%; border:5px solid #008080;">
+                    </a> </td>
+            </tr>
 
-    <div style="margin-top: 50px;">
-        <div *ngIf="checkIfShopIsOpened()">
-            <h2>{{getOpenedMessage()}}</h2>
-          </div>
-          <div *ngIf="!checkIfShopIsOpened()">
-            <h2>{{getClosedMessage()}}</h2>
-          </div>
+        </tbody>
+    </table>
 
-    </div>
+</div>
+
+
+<div *ngIf="checkIfShopIsOpened()">
+        <div class="alert alert-success" role="alert" 
+        style="border: 0px; background-color: rgba(169, 255, 129, 0.39); text-align: center;">
+                <b style="color: #265300;">{{getOpenedMessage()}}</b>
+            </div>
+</div>
+
+<div *ngIf="!checkIfShopIsOpened()">
+        <div class="alert alert-success" role="alert" 
+        style="border: 0px; background-color: rgba(255, 129, 129, 0.39); text-align: center;">
+                <b style="color: #530000;">{{getClosedMessage()}}</b>
+            </div>
+</div>
+
 </html>
