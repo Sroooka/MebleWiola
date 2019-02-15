@@ -3,7 +3,8 @@
     <table style="table-layout: fixed; white-space:nowrap; width: 100vw; margin-left: auto; margin-right: auto;">
         <tbody>
             <tr>
-                <td style="padding: 30px;"></td>
+                <td style="padding: 30px;">
+                </td>
             </tr>
             <tr>
                 <td style="padding: 10px;">
@@ -20,14 +21,15 @@
                         <img class="img" src="http://www.mkfoam.pl/images/stories/promocje/styczen2019/81274.jpg" style="width: 100%; border:5px solid #008080;">
                     </a> </td>
             </tr>
-
+            <tr>
+                    <td style="padding: 20vh;"></td>
+                </tr>
         </tbody>
     </table>
 
 </div>
 
-
-<div *ngIf="checkIfShopIsOpened()">
+<div  *ngIf="checkIfShopIsOpened()">
         <div class="alert alert-success" role="alert" 
         style="border: 0px; background-color: rgba(169, 255, 129, 0.39); text-align: center;">
                 <b style="color: #265300;">{{getOpenedMessage()}}</b>
@@ -40,5 +42,4 @@
                 <b style="color: #530000;">{{getClosedMessage()}}</b>
             </div>
 </div>
-
 </html>
