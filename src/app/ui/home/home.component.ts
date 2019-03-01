@@ -118,12 +118,17 @@ export class HomeComponent implements OnInit {
         } else if(this.weekday == "Saturday"){
           // Saturday
           // from 9-13:30
-          hoursLeft = 14 - this.hours - 1;
-          minLeft = (30 - this.minutes) % 30;
+          hoursLeft = 13 - this.hours - 1;
+          minLeft = (60 - this.minutes) % 60;
+          minLeft+= 30;
+          if(minLeft>=60) {
+            hoursLeft++;
+            minLeft-= 30;
+          }
           if(minLeft == 0) hoursLeft++;
         } else if(this.weekday == "Sunday"){
           // Sunday
-          // from 9-13:00
+          // from 10-13:00
           hoursLeft = 13 - this.hours - 1;
           minLeft = (60 - this.minutes) % 60;
           if(minLeft == 0) hoursLeft++;
