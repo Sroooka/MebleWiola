@@ -134,7 +134,9 @@ export class HomeComponent implements OnInit {
           if(minLeft == 0) hoursLeft++;
         }
         
-        message = message + hoursLeft + ":" + minLeft + ". Zapraszamy!";
+        message = message + hoursLeft + ":";
+        if(minLeft < 10) message = message + "0";
+        message = message + minLeft + ". Zapraszamy!";
     return message;
   }
 
