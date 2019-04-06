@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
     if(this.checkIfShopIsOpened()){
       this.srcShop = './assets/Media/Shop/shop_day.jpg';
     } else{
-      this.srcShop = './assets/Media/Shop/shop_day.jpg';
+      this.srcShop = './assets/Media/Shop/shop_night.jpg';
     }
   }
 
