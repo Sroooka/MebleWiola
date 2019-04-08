@@ -78,8 +78,8 @@ export class HomeComponent implements OnInit {
           }
         } else if(this.weekday == "Sunday"){
           // Sunday
-          // from 9-13:00
-          var start = 9;
+          // from 10-13:00
+          var start = 10;
           var stop = 13;
           if(this.hours >= start && this.hours < stop){
             //open
@@ -142,7 +142,13 @@ export class HomeComponent implements OnInit {
 
   getClosedMessage(){
     this.updateTime();
-    var message = "Sklep zamknięty, zapraszamy jutro o godzinie ";
+    var message = "Sklep zamknięty, zapraszamy ";
+    if(this.hours < 11){
+      message += "dzisiaj";
+    }else{
+      message += "jutro";
+    }
+    message += " o godzinie ";
     var nextWeekday = this.weekdays[(this.day.getDay() + 1) % 7];
     if(nextWeekday == "Sunday"){
       message = message + "10:00!";
