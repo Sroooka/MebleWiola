@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   srcShop = null;
+  srcPromo1 = './assets/Media/Promotions/promo1.jpg';
+  srcPromo2 = './assets/Media/Promotions/promo2.jpg';
+  srcPromo3 = './assets/Media/Promotions/promo3.jpg';
   day: Date = new Date();
   weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   weekday = null;
